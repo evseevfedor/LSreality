@@ -1,0 +1,81 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?578760c2a324a05ed5fbdf5972e6b135") format("truetype"),
+url("./flaticon.woff?578760c2a324a05ed5fbdf5972e6b135") format("woff"),
+url("./flaticon.woff2?578760c2a324a05ed5fbdf5972e6b135") format("woff2"),
+url("./flaticon.eot?578760c2a324a05ed5fbdf5972e6b135#iefix") format("embedded-opentype"),
+url("./flaticon.svg?578760c2a324a05ed5fbdf5972e6b135#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "idea": "\f101",
+    "business": "\f102",
+    "target": "\f103",
+    "business-plan": "\f104",
+    "business-1": "\f105",
+    "document": "\f106",
+    "business-2": "\f107",
+    "right-quotes-symbol": "\f108",
+    "web-design": "\f109",
+    "content-writing": "\f10a",
+    "application": "\f10b",
+    "idea-1": "\f10c",
+    "design-process": "\f10d",
+    "experience": "\f10e",
+);
+
+.flaticon-idea:before {
+    content: map-get($flaticon-map, "idea");
+}
+.flaticon-business:before {
+    content: map-get($flaticon-map, "business");
+}
+.flaticon-target:before {
+    content: map-get($flaticon-map, "target");
+}
+.flaticon-business-plan:before {
+    content: map-get($flaticon-map, "business-plan");
+}
+.flaticon-business-1:before {
+    content: map-get($flaticon-map, "business-1");
+}
+.flaticon-document:before {
+    content: map-get($flaticon-map, "document");
+}
+.flaticon-business-2:before {
+    content: map-get($flaticon-map, "business-2");
+}
+.flaticon-right-quotes-symbol:before {
+    content: map-get($flaticon-map, "right-quotes-symbol");
+}
+.flaticon-web-design:before {
+    content: map-get($flaticon-map, "web-design");
+}
+.flaticon-content-writing:before {
+    content: map-get($flaticon-map, "content-writing");
+}
+.flaticon-application:before {
+    content: map-get($flaticon-map, "application");
+}
+.flaticon-idea-1:before {
+    content: map-get($flaticon-map, "idea-1");
+}
+.flaticon-design-process:before {
+    content: map-get($flaticon-map, "design-process");
+}
+.flaticon-experience:before {
+    content: map-get($flaticon-map, "experience");
+}

@@ -1,0 +1,15 @@
+:root {
+  --fontFamily: 'Barlow Condensed', sans-serif;
+  --fontFamily2: 'Mulish', sans-serif;
+  --mainColor: #3f9f42;
+  --whiteColor: #ffffff;
+  --fixWhiteColor: #ffffff;
+  --blackColor: #071327;
+  --fix-blackColor: #071327;
+  --paragraphColor: #666666;
+  --f8f8f8: #f8f8f8;
+  --card-title-fontSize: 24px;
+  --fontSize: 16px;
+  --transition: 0.5s;
+  --boxShadow:  rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}

@@ -1,0 +1,3536 @@
+/*
+@File: Gliter Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Navbar CSS
+** - Buttons
+** - Index 01 Banner Area
+** - Index 01 Features Area
+** - Index 01 About Area
+** - Index 01 Services Area
+** - Index 01 Why Only We Area
+** - Index 01 Project Area
+** - Index 01 Fun Facts Area 
+** - Index 01 Team Area
+** - Index 01 Why Choose US Area
+** - Index 01 Testimonial Area
+** - Index 01 Booking Area
+** - Index 01 Blog Area
+
+** - Index 02 Banner Area
+** - Index 02 Features Area
+** - Index 02 About Area
+** - Index 02 Services Area
+** - Index 02 Why Only We Area
+** - Index 02 Fun Facts Area 
+** - Index 02 Team Area
+** - Index 02 Why Choose US Area
+** - Index 02 Testimonial Area
+** - Index 02 Blog Area
+
+** - Index 03 Banner Area
+** - Index 03 Features Area
+** - Index 03 About Area
+** - Index 03 Services Area
+** - Index 03 Why Only We Area
+** - Index 03 Project Area
+** - Index 03 Fun Facts Area 
+** - Index 03 Team Area
+** - Index 03 Why Choose US Area
+** - Index 03 Testimonial Area
+** - Index 03 Blog Area
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --fontFamily: 'Barlow Condensed', sans-serif;
+    --fontFamily2: 'Mulish', sans-serif;
+    --mainColor: #3f9f42;
+    --whiteColor: #ffffff;
+    --fixWhiteColor: #ffffff;
+    --blackColor: #071327;
+    --fix-blackColor: #071327;
+    --paragraphColor: #666666;
+    --f8f8f8: #f8f8f8;
+    --card-title-fontSize: 24px;
+    --fontSize: 16px;
+    --transition: 0.5s;
+    --boxShadow:  rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--whiteColor);
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontFamily);
+}
+a {
+    transition: var(--transition);
+    color: var(--blackColor);
+    text-decoration: none;
+    outline: 0 !important;
+    &:hover {
+        color: var(--mainColor);
+        text-decoration: none;
+    }
+}
+:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.form-control {
+    border: 1px solid transparent !important;
+    transition: .5s ease-in-out;
+    &:focus {
+        border: 1px solid var(--mainColor) !important;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    font-family: var(--fontFamily2);
+    color: var(--paragraphColor);
+    font-size: var(--fontSize);
+    margin-bottom: 15px;
+    line-height: 1.8;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.ptb-100 {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.ptb-70 {
+    padding: {
+        top: 70px;
+        bottom: 70px;
+    }
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.pb-70 {
+    padding-bottom: 70px;
+}
+.pt-30 {
+    padding-top: 0px;
+}
+.pl-20 {
+    padding-left: 20px;
+}
+.pr-20 {
+    padding-right: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.section-content {
+    margin-top: 20px;
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+    &-cell {
+        vertical-align: middle;
+    }
+}
+.sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    padding: 0px ;
+    background-color: var(--whiteColor) !important;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.container-fluid {
+    padding: {
+        left: 50px;
+        right: 50px;
+    };
+}
+.bg-0a0144 {
+    background-color: #0a0144;
+}
+.bg-f8f8f8 {
+    background-color: #f8f8f8;
+}
+.bg-071327 {
+    background-color: #071327;
+}
+.bg-f8f9fc {
+    background-color: #f8f9fc;
+}
+.bg-f6f2ef {
+    background-color: #f6f2ef;
+}
+
+@import './pager-scss/header';
+@import './pager-scss/footer';
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+    &::before {
+        content: "\f0da";
+        font-family: "Font Awesome 5 Free"
+    }
+}
+
+/*=================================
+Buy Now Btn
+====================================*/
+.buy-now-btn {
+    img {
+        top: 50%;
+        left: 15px;
+        width: 15px;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    right: 10px;
+    z-index: 99;
+    top: 50%;
+    position: fixed;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    display: inline-block;
+    color: var(--whiteColor);
+    background-color: #82b440;
+    padding: 10px 15px 10px 37px;
+    box-shadow: 0 1px 10px 1px #82b440b9;
+    animation: jello 3s infinite ;
+    font-size: 12px;
+    font-weight: 600;
+    &:hover {
+        color: var(--whiteColor);
+        background-color: var(--mainColor);
+    }
+}
+
+/*================================================
+Default button Area CSS
+=================================================*/
+.default-button {
+    padding: 15px 25px;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    border: 0px;
+    overflow: hidden !important;
+    color: var(--fixWhiteColor);
+    background-color: var(--mainColor);
+    &::before {
+        content: '';
+        width: 0%;
+        height: 2px;
+        overflow: hidden;
+        transition: .5s ease;
+        background-color: #fff;
+        position: absolute;
+        right: unset;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    &::after {
+        content: '';
+        width: 2px;
+        height: 0%;
+        overflow: hidden;
+        transition: .5s ease;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: unset;
+        z-index: 0;
+    }
+    font: {
+        size: 15px;
+        weight: 600;
+        family: var(--fontFamily2);
+    };
+    i {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    &:hover {
+        color: var(--fixWhiteColor);
+        &::before {
+            left: unset;
+            right: 0;
+            width: 100%;
+        }
+        &::after {
+            height: 100%;
+            bottom: 0;
+            top: unset;
+        }
+    }
+}
+.default-button-2 {
+    color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    background-color: var(--whiteColor);
+    &:hover {
+        background-color: var(--mainColor);
+    }
+}
+.read-more-btn {
+    font: {
+        size: 15px;
+        weight: 600;
+        family: var(--fontFamily2);
+    };
+    i {
+        font-size: 14px !important;
+        margin-left: 2px;
+        position: relative;
+        top: 1px;
+    }
+}
+.default-button-middle {
+    display: table;
+    margin: {
+        left: auto;
+        right: auto;;
+    };
+}
+
+/*================================================
+Default Section Title Area CSS
+=================================================*/
+.default-section-title {
+    span {
+        position: relative;
+        margin-bottom: 15px;
+        display: inline-block;
+        padding-left: 15px;
+        line-height: 1;
+        color: var(--mainColor);
+        &::before {
+            content: '';
+            width: 3px;
+            height: 100%;
+            background-color: var(--mainColor);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        font: {
+            size: 18px;
+            weight: 500;
+            family: var(--fontFamily);
+        };
+    }
+    h3 {
+        margin-bottom: 0px;
+        color: var(--blackColor);
+        font: {
+            size: 36px;
+            weight: 700;
+        };
+    }
+}
+.default-section-title-middle {
+    max-width: 680px;
+    text-align: center;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+
+.gradient-bg1 {
+    background: linear-gradient(to bottom right, #ffffff, #e2f3f7,#ffffff, #e2f3f7,#ffffff, #e2f3f7);
+    background-size: 250%;
+    animation: background-colors 20s infinite linear forwards;
+}
+
+/*================================================
+Index 01 Banner Area CSS
+=================================================*/
+.main-banner {
+    position: relative;
+    .banner-text-area {
+        position: relative;
+        max-width: 800px;
+        padding: {
+            top: 315px;
+            bottom: 200px;
+        };
+    }
+}
+.main-banner-single-slider {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/banner/banner-1-1.jpg');
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, #000000fa,#00000069, #00000000);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.mbs-2 {
+    background-image: url('../images/banner/banner-1-2.jpg');
+}
+.mbs-3 {
+    background-image: url('../images/banner/banner-1-3.jpg');
+}
+.banner-text-area {
+    position: relative;
+    z-index: 1;
+    h6 {
+        color: var(--mainColor);
+        font: {
+            weight: 500;
+            size: 18px;
+            family: var(--fontFamily);
+        };
+    }
+    h1 {
+        color: var(--fixWhiteColor);
+        margin: {
+            top: 12px;
+            bottom: 20px;
+        };
+        font: {
+            size: 90px;
+            weight: 700;
+        };
+    }
+    p {
+        max-width: 720px;
+        color: rgba($color: #ffffff, $alpha: 0.9);
+    }
+    .banner-buttons {
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-right: 15px;
+                .default-button {
+                    margin-top: 20px;
+                    padding: {
+                        top: 15px;
+                        bottom: 15px;
+                    };
+                }
+                .banner-button {
+                    color: var(--blackColor);
+                    background-color: var(--whiteColor);
+                    &:hover {
+                        color: var(--whiteColor);
+                        background-color: var(--mainColor);
+                    }
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
+.slider-nav {
+    position: relative;
+    .owl-nav {
+        width: 99%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s ease-in-out;
+        z-index: 0;
+        opacity: 0;
+        button {
+            width: 40px;
+            height: 40px;
+            font-size: 14px !important;
+            border-radius: 50%;
+            transition: .5s ease;
+            color: var(--blackColor) !important;
+            background-color: var(--whiteColor) !important;
+            &:hover {
+                color: var(--whiteColor) !important;
+                background-color: var(--mainColor) !important;
+            }
+        }
+    }
+    &:hover {
+        .owl-nav {
+            opacity: 1;
+        }
+    }
+}
+
+/*================================================
+Index 01 Features Area CSS
+=================================================*/
+.features-card {
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    padding: 30px 30px 25px 105px;
+    background-color: var(--whiteColor);
+    i {
+        font-size: 55px;
+        color: var(--blackColor);
+        transition: .5s ease-in-out;
+        position: absolute;
+        left: 30px;
+        z-index: 1;
+    }
+    h4 {
+        transition: .5s ease-in-out;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+        a {
+            transition: .5s ease-in-out;
+        }
+    }
+    p {
+        z-index: 1;
+        position: relative;
+        transition: .5s ease-in-out;
+    }
+    &::before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        transition: .5s ease-in-out;
+        background-color: var(--mainColor);
+        position: absolute;
+        left: unset;
+        right: 0;
+        top: 0;
+        z-index: 0;
+    }
+    &:hover {
+        i,h4,a,p {
+            color: var(--fixWhiteColor);
+        }
+        &::before {
+            width: 100%;
+            right: unset;
+            left: 0;
+        }
+    }
+}
+
+/*================================================
+Index 01 About Area CSS
+=================================================*/
+.about-img-area {
+    position: relative;
+    padding: 30px;
+    .main-img {
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .small-img {
+        max-width: 40%;
+        border-radius: 10px;
+        border: {
+            top: 10px solid #fff;
+            left: 10px solid #fff;
+        };
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    &::before {
+        content: '';
+        width: 25%;
+        height: 25%;
+        border-radius: 0 0 0 10px;
+        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+        background-color: var(--mainColor);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    .about-exp {
+        display: inline-block;
+        padding: 20px  20px 15px;
+        text-align: center;
+        background-color: rgba($color: #3f9f42, $alpha: 0.9);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        h4 {
+            color: var(--fixWhiteColor);
+            margin-bottom: 0px;
+            font: {
+                size: 36px;
+                weight: 700;
+            };
+        }
+        p {
+            color: var(--fixWhiteColor);
+            font-size: 14px;
+        }
+    }
+}
+.about-text-area {
+    .default-section-title {
+        margin-bottom: 15px;
+    }
+}
+.about-intro {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    img {
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    h4 {
+        margin-bottom: 2px;
+        color: var(--blackColor);
+        font: {
+            size: 20px;
+            weight: 700;
+        };
+    }
+    p {
+        font-size: 14px;
+        margin-top: 8px !important;
+    }
+}
+.barfiller{
+    position: relative;
+    height: 10px;
+    border: 0px;
+    padding-bottom: 5px;
+    margin-top: 45px;
+    margin-bottom: 55px;
+    background-color: #72727213;
+    border-radius: 20px;
+    .label{
+        position: absolute;
+        top: -35px;
+        color: var(--blackColor);
+        font: {
+            family: var(--fontFamily);
+            size: 18px;
+            weight: 600;
+        };
+    }
+    .tip {
+        margin-top: -40px;
+        color: var(--blackColor);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: var(--fontFamily);
+        border-radius: 5px;
+        background-color: transparent;
+        &::after{
+            left: 12px;
+            border: 0px;
+        }
+    }
+    .fill{
+        background-color: var(--mainColor) !important;
+        border-radius: 20px 50px 0% 20px !important;
+    }
+    &:last-child{
+        margin-bottom: 0px;
+    }
+}
+.progress-bar-area {
+    margin-top: 60px;
+    .barfiller {
+        &:nth-child(even) {
+            .fill {
+                background-color: var(--blackColor) !important;
+            }
+        }        
+    }
+}
+
+/*================================================
+Index 01 Service Area CSS
+=================================================*/
+.service-card {
+    position: relative;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    &::before {
+        content: '';
+        width: 80%;
+        height: 10%;
+        border-radius: 10px;
+        background-color: #707070;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        z-index: 0;
+        transform: translateX(-50%);
+    }
+    &::after {
+        content: '';
+        width: 0%;
+        height: 10%;
+        border-radius: 10px;
+        transition: .5s ease-in-out;
+        background-color: var(--mainColor);
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        z-index: 0;
+        transform: translateX(-50%);
+    }
+    .service-card-img {
+        position: relative;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 0%;
+            transition: .5s ease-in-out;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        i {
+            font-size: 0px;
+            color: var(--fixWhiteColor);
+            transition: .5s ease-in-out;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .service-card-text {
+        z-index: 1;
+        position: relative;
+        padding: 25px 30px 20px;
+        border-radius: 0px 0px 10px 10px;
+        background-color: var(--blackColor);
+        h4 {
+            margin-bottom: 0px;
+            line-height: 1.4;
+            font: {
+                weight: 500;
+                size: var(--card-title-fontSize);
+            };
+            a {
+                color: var(--whiteColor);
+            }
+        }
+    }
+    &:hover {
+        &::after {
+            width: 80%;
+        }
+        .service-card-img {
+            &::before {
+                height: 100%;
+            }
+            i {
+                font-size: 55px;
+            }
+        }
+        .service-card-text {
+            h4 {
+                a {
+                    color: var(--mainColor);
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 01 Why Only Us Area CSS
+=================================================*/
+.why-only-we-text-area {
+    p {
+        margin: {
+            top: 15px;
+            bottom: 0px;
+        };
+    }
+}
+.why-we-list {
+    ul {
+        margin: 5px 0px 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            color: var(--blackColor);
+            display: inline-block;
+            margin-top: 10px;
+            width: 45%;
+            font: {
+                weight: 600;
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            i {
+                color: var(--mainColor);
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.why-only-img-area {
+    padding: 50px;
+    position: relative;
+    img {
+        border-radius: 10px;
+    }
+    .ww-team-card {
+        border-radius: 10px;
+        display: inline-block;
+        padding: 20px  30px 15px;
+        text-align: center;
+        background-color: rgba($color: #3f9f42, $alpha: 0.95);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        h4 {
+            color: var(--fixWhiteColor);
+            margin-bottom: 0px;
+            font: {
+                size: 36px;
+                weight: 700;
+            };
+        }
+        p {
+            color: var(--fixWhiteColor);
+            font: {
+                size: 17px;
+                family: var(--fontFamily);
+            };
+        }
+    }
+    .ww-project-card {
+        border-radius: 10px;
+        display: inline-block;
+        padding: 20px  30px 15px;
+        text-align: center;
+        box-shadow: var(--boxShadow);
+        background-color: var(--whiteColor);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        h4 {
+            color: var(--mainColor);
+            margin-bottom: 0px;
+            font: {
+                size: 36px;
+                weight: 700;
+            };
+        }
+        p {
+            font: {
+                size: 17px;
+                family: var(--fontFamily);
+            };
+        }
+    }
+}
+
+/*================================================
+Index 01 Portfolio Area CSS
+=================================================*/
+.portfolio-card {
+    margin-top: 30px;
+    position: relative;
+    img {
+        border-radius: 10px;
+    }
+    .portfolio-card-text-area {
+        background-color: var(--mainColor);
+        border-radius: 0px 10px 0px 10px;
+        padding: 30px 10px 25px 25px;
+        transition: .8s ease-in-out;
+        transform-origin: left;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 95%;
+        transform: rotateY(90deg);
+        h4 {
+            margin-bottom: 5px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+            a {
+                color: var(--fixWhiteColor);
+            }
+        }
+        p {
+            color: rgba($color: #ffffff, $alpha: 0.8);
+        }
+        a {
+            i {
+                width: 45px;
+                height: 35px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--mainColor);
+                background-color: var(--whiteColor);
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    &:hover {
+        .portfolio-card-text-area {
+            transform: rotateY(0);
+        }
+    }
+}
+
+/*================================================
+Index 01 Fun Facts Area CSS
+=================================================*/
+.fun-facts-1 {
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-color: var(--whiteColor);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+.fun-facts-content {
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
+    padding: 50px 50px 45px;
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow);
+}
+.fun-facts-text-area {
+    p {
+        margin-top: 12px;
+    }
+}
+.fun-facts-card {
+    text-align: center;
+    .odo-text {
+        position: relative;
+        left: 4px;
+        top: 7px;
+    }
+    h2 {
+        color: var(--mainColor);
+        margin-bottom: 0px;
+        line-height: 1;
+        font: {
+            size: 72px;
+            weight: 700;
+        };
+    }
+    p {
+        font: {
+            size: 20px;
+            weight: 600;
+            family: var(--fontFamily);
+        };
+    }
+}
+.fcb {
+    h2 {
+        color: var(--blackColor);
+    }
+}
+
+/*================================================
+Index 01 Team Area CSS
+=================================================*/
+.team-card {
+    margin-top: 30px;
+    overflow: hidden;
+    box-shadow: var(--boxShadow);
+    background-color: var(--whiteColor);
+    img {
+        transition: .5s ease-in-out;
+    }
+    .team-card-text {
+        padding: 30px 20px;
+        text-align: center;
+        h4 {
+            margin-bottom: 5px;
+            color: var(--blackColor);
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    width: 30px;
+                    height: 30px;
+                    padding-top: 1px;
+                    font-size: 13px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--fixWhiteColor);
+                    background-color: #707070;
+                    transition: .5s ease-in-out;
+                    &:hover {
+                        background-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+    }    
+    &:hover {
+        img {
+            transform: scale(.9) rotate(2deg);
+        }
+    }
+}
+
+/*================================================
+Index 01 Why Choose Us Area CSS
+=================================================*/
+.why-we-img-area {
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/why-we/ww7.png');
+    height: 100%;
+    img {
+        display: none;
+    }
+}
+.why-we-1 {
+    position: relative;
+    .shape {
+        .shape-img {
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            z-index: 1;
+        }
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100px;
+        background-color: var(--whiteColor);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+
+    }
+}
+.why-we-card {
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 25px 25px 25px;
+    transition: .5s ease-in-out;
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow);
+    position: relative;
+    z-index: 2;
+    h4 {
+        margin-bottom: 12px;
+        color: var(--blackColor);
+        transition: .5s ease-in-out;
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 700;
+        };
+    }
+    p {
+        transition: .5s ease-in-out;
+    }
+    &:hover {
+        background-color: var(--mainColor);
+        h4,p {
+            color: var(--fixWhiteColor);
+        }
+    }
+}
+.why-we-text-area-1 {
+    max-width: 500px;
+    padding: {
+        top: 100px;
+        bottom: 200px;
+    };
+}
+
+/*================================================
+Index 01 Testimonials Area CSS
+=================================================*/
+.testimonial-card {
+    margin: 30px 15px 15px;
+    position: relative;
+    padding: 30px 30px 25px 100px;
+    &::before {
+        content: '';
+        width: 93%;
+        height: 100%;
+        background-color: var(--whiteColor);
+        box-shadow: var(--boxShadow);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+    img {
+        border-radius: 50%;
+        width: fit-content !important;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    p {
+        color: var(--blackColor);
+        font: {
+            size: 17px;
+            style: italic;
+        };
+    }
+    .testimonial-intro-area {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h4 {
+            margin-bottom: 5px;
+            color: var(--blackColor);
+            font: {
+                size: 20px;
+                weight: 700;
+            };
+        }
+        span {
+            color: var(--paragraphColor);
+            font: {
+                size: 14px;
+                family: var(--fontFamily2);
+            };
+        }
+    }
+    .testimonial-card-text {
+        position: relative;
+        z-index: 2;
+    }
+}
+.stars {
+    ul {
+        margin: 0px;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            i {
+                color: #ffab00;
+            }
+        }
+    }
+}
+.testimonial-slider-area {
+    position: relative;
+    .owl-nav {
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+        button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: .6s ease-in-out;
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor) !important;
+            &:hover {
+                background-color: var(--mainColor) !important;
+            }
+        }
+        .owl-next {
+            float: right;
+        }
+    }
+    .owl-dots {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: 13px;
+        transform: translateX(-50%);
+        width: 98%;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        .owl-dot {
+            width: 100%;
+            height: 2px;
+            background-color: #d8d8d8;
+            transition: .5s ease-in-out;
+        }
+        .active {
+            background-color: var(--mainColor);
+        }
+    }
+}
+
+/*================================================
+Index 01 Booking Area CSS
+=================================================*/
+.booking-form-area {
+    p {
+        margin-top: 12px;
+    }
+    .form-control {
+        margin: {
+            top: 5px;
+            bottom: 15px;
+        };
+        border: 0px;
+        padding: 15px 15px;
+        background-color: #ececec;
+        font: {
+            size: 15px;
+            family: var(--fontFamily2);
+        };
+    }
+    .default-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.booking-img {
+    position: relative;
+    padding: 40px 40px 0px 0px;
+    img {
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+    }
+    .booking-shape {
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    &::before {
+        content: '';
+        width: 30%;
+        height: 30%;
+        border-radius: 0px 10px 0px 0px;
+        background-color: var(--mainColor);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 0;
+    }
+}
+
+/*================================================
+Index 01 Blog Area CSS
+=================================================*/
+.blog-card {
+    margin-top: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: var(--boxShadow);
+    background-color: var(--whiteColor);
+    &::before {
+        content: '';
+        width: 95%;
+        height: 50%;
+        border-radius: 15px;
+        transition: .5s ease-in-out;
+        background-color: var(--mainColor);
+        position: absolute;
+        bottom: 0px;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .blog-img-area {
+        position: relative;
+        img {
+            border-radius: 10px 10px 0px 0px;
+            width: 100%;
+        }
+        .blog-img-date{
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            padding-top: 6px;
+            border-radius: 50%;
+            display: inline-block;
+            color: var(--fixWhiteColor);
+            background-color: var(--mainColor);
+            font-size: 18px;
+            position: absolute;
+            right: 30px;
+            bottom: -30px;
+            z-index: 3;
+            span {
+                display: block;
+                margin-bottom: 5px;
+                line-height: 1;
+                font: {
+                    size: 22px;
+                    weight: 700;
+                    family:var(--fontFamily)
+                };
+                &:last-child {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: var(--fontFamily2);
+                }
+            }
+        }
+    }
+    .blog-text-area {
+        padding: 35px 30px 25px;
+        border-radius: 0px 0px 15px 15px;
+        background-color: var(--whiteColor);
+        position: relative;
+        z-index: 2;
+        .blog-date {
+            ul {
+                margin: 0;
+                padding: 0px;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin-right: 15px;
+                    position: relative;
+                    color: var(--paragraphColor);
+                    &::before {
+                        content: '/';
+                        font-size: 15px;
+                        position: absolute;
+                        right: -10px;
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    font: {
+                        size: 15px;
+                        family: var(--fontFamily2);
+                    };
+                    i {
+                        margin-right: 3px;
+                        color: var(--mainColor);
+                    }
+                }
+            }
+        }
+        h4 {
+            line-height: 1.4;
+            margin: {
+                top: 12px;
+                bottom: 18px;
+            };
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+    &:hover {
+        &::before {
+            bottom: -10px;
+        }
+    }
+}
+.blog-date {
+    ul {
+        margin: 0;
+        padding: 0px;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+            color: var(--paragraphColor);
+            &::before {
+                content: '/';
+                font-size: 15px;
+                position: absolute;
+                right: -10px;
+            }
+            &:last-child {
+                margin-right: 0px;
+                &::before {
+                    display: none;
+                }
+            }
+            font: {
+                size: 15px;
+                family: var(--fontFamily2);
+            };
+            i {
+                margin-right: 3px;
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+
+
+/*================================================
+Index 01 Partner Area CSS
+=================================================*/
+.partner-slider-area {
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow);
+    border-radius: 10px;
+    padding: 70px;
+    img {
+        filter: opacity(.5);
+        transition: .5s ease-in-out;
+        &:hover {
+            filter: opacity(1);
+        }
+    }
+}
+.partner{
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-color: #020a18;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+/*================================================
+Index 02 Banner Area CSS
+=================================================*/
+.home-banner {
+    overflow: hidden;
+    background: linear-gradient(to right, #ffffff, #e2f3f7,#ffffff, #e2f3f7,#ffffff, #e2f3f7);
+    background-size: 200%;
+    animation: background-colors 15s infinite linear forwards ;
+    position: relative;
+    padding-top: 100px;
+
+}
+.banner-text-area-2 {
+    padding-bottom: 100px;
+    h1 {
+        color: var(--blackColor);
+        font-size: 72px;
+    }
+    p {
+        color: var(--paragraphColor);
+    }
+    .banner-buttons {
+        ul {
+            li {
+                .banner-button {
+                    color: var(--mainColor);
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 02 Features Area CSS
+=================================================*/
+.features-2-content {
+    position: relative;
+    margin-top: -110px;
+    
+}
+
+/*================================================
+Index 02 Service Area CSS
+=================================================*/
+.service-card-2 {
+    margin: 30px 20px 0px;
+    .service-card-2-text {
+        padding: 25px 15px 0px;
+        h4 {
+            margin-bottom: 12px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+}
+.slider-area-nav {
+    position: relative;
+    .owl-nav {
+        opacity: 0;
+        transition: .5s ease-in-out;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 105%;
+        transform: translate(-50%, -50%);
+        button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: .5s ease-in-out;
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor) !important;
+            &:hover {
+                background-color: var(--mainColor) !important;
+            }
+        }
+        .owl-next {
+            float: right;
+        }
+    }
+    &:hover {
+        .owl-nav {
+            opacity: 1;
+        }
+    }
+}
+
+/*================================================
+Index 02 About Area CSS
+=================================================*/
+.about-img-2 {
+    position: relative;
+    padding: 30px;
+    .main-img {
+        border-radius: 15px;
+        position: relative;
+        z-index: 2;
+    }
+    .shape {
+        .shape1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+        }
+        .shape2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+    .about-exp {
+        text-align: center;
+        border-radius: 10px;
+        display: inline-block;
+        padding: 20px  20px 15px;
+        background-color: var(--whiteColor);
+        box-shadow: var(--boxShadow);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        h4 {
+            margin-bottom: 0px;
+            color: var(--blackColor);
+            font: {
+                size: 36px;
+                weight: 700;
+            };
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.about-text-area-2 {
+    p {
+        margin: {
+            top: 15px;
+            bottom: 0px;
+        };
+    }
+    .about-list {
+        margin-top: 10px;
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li {
+                color: var(--blackColor);
+                display: inline-flex;
+                align-items: baseline;
+                margin-top: 12px;
+                width: 48%;
+                font: {
+                    family: var(--fontFamily2);
+                    size: var(--fontSize);
+                    weight: 600;
+                };
+                i {
+                    color: var(--mainColor);
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 02 Team Area CSS
+=================================================*/
+.team-card-2 {
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    background-color: var(--whiteColor);
+    .team-card-2-img {
+        position: relative;
+        overflow: hidden;
+        img {
+            border-radius: 10px 10px 0px 0px;
+            transition: .5s ease-in-out;
+        }
+        .team-social-icons {
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            ul {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    transition: .5s ease-in-out;
+                    transform: rotateX(90deg);
+                    transform-origin: bottom;
+                    a {
+                        width: 35px;
+                        height: 30px;
+                        font-size: 15px;
+                        border-radius: 5px 5px 0px 0px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--whiteColor);
+                        transition: .5s ease-in-out;
+                        background-color: var(--blackColor);
+                        &:hover {
+                            background-color: var(--mainColor);
+                        }
+                    }
+                    &:nth-child(odd) {
+                        transition: .8s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    .team-card-text-2 {
+        padding: 25px 25px 20px 30px;
+        h4 {
+            margin-bottom: 5px;
+            color: var(--blackColor);
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    &:hover {
+        .team-card-2-img {
+            img {
+                transform: scale(1.05);
+            }
+            .team-social-icons  {
+                ul {
+                    li {
+                        transform: rotateX(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 02 Why Only Us Area CSS
+=================================================*/
+.why-only-img-area-2 {
+    .ww-main-img {
+        position: relative;
+        z-index: 1;
+    }
+    .ww-team-card {
+        right: unset;
+        left: 0;
+    }
+    .ww-project-card {
+        left: unset;
+        right: 0;
+    }
+    .shape {
+        .shape1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+        }
+        .shape2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+}
+
+/*================================================
+Index 02 Testimonial Area CSS
+=================================================*/
+.testimonial-card-2 {
+    margin: 30px 15px 0px;
+    .testimonial-card-text-2 {
+        text-align: center;
+        padding: 20px 20px 60px;
+        border: 1px solid #eeeeee;
+        background-color: var(--whiteColor);
+        i {
+            font-size: 45px;
+            color: #eeeeee;
+            transition: .5s ease-in-out;
+        }
+        p {
+            font-style: italic;
+            color: var(--blackColor);
+        }
+    }
+    .testimonial-card-2-intro {
+        text-align: center;
+        position: relative;
+        margin-top: -40px;
+        margin-bottom: -6px;
+        img {
+            border-radius: 50%;
+            width: fit-content !important;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+        h4 {
+            color: var(--blackColor);
+            margin: {
+                top: 10px;
+                bottom: 5px;
+            };
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    &:hover {
+        .testimonial-card-text-2 {
+            i {
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+
+/*================================================
+Index 02 Why Choose US Area CSS
+=================================================*/
+.why-we-img-area-2 {
+    padding: 30px;
+    position: relative;
+    .main-img {
+        position: relative;
+        border-radius: 10px;
+        z-index: 2;
+    }
+    .shape-img {
+        .shape1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        .shape2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        .shape3 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+
+}
+
+/*================================================
+Index 02 Blog Area CSS
+=================================================*/
+.blog-card-2 {
+    .blog-img-area {
+        .blog-img-date {
+            border-radius: 10px;
+        }
+    }
+    .blog-text-area {
+        border: 1px solid #eeeeee;
+        border-radius: 0px;
+        border-top: 0px;
+    }
+    &::before {
+        display: none;
+    }
+}
+
+/*================================================
+Index 03 Banner Area CSS
+=================================================*/
+.banner {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/banner/banner-3-bg.jpg');
+    position: relative;
+    padding-top: 120px;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100px;
+        background-color: var(--whiteColor);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    .shape {
+        .shape1 {
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            z-index: 1;
+        }
+    }
+    .banner-content-3 {
+        position: relative;
+        z-index: 1;
+    }
+}
+.banner-img-3 {
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/banner/banner-3-img.jpg');
+    height: 100%;
+    z-index: 2;
+    img {
+        display: none;
+        border-radius: 10px;
+    }
+}
+.banner-text-area-3 {
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+    padding: {
+        top: 100px;
+        bottom: 200px;
+    };
+}
+
+/*================================================
+Index 03 About Area CSS
+=================================================*/
+.about-img-area-3 {
+    overflow: hidden;
+    .small-img {
+        border: 0px;
+        right: unset;
+        left: 0;
+    }
+    .about-exp {
+        left: 10px;
+        border-radius: 10px;
+        box-shadow: var(--boxShadow);
+        background-color: var(--whiteColor);
+        h4,p {
+            color: var(--blackColor);
+            font-family: var(--fontFamily);
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .shape {
+        .shape1 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+            animation: top-bottom 2s infinite linear alternate;
+        }
+        .shape2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 0;
+            animation: top-bottom 4s infinite linear alternate;
+        }
+    }
+} 
+
+/*================================================
+Index 03 Services Area CSS
+=================================================*/
+.service-card-3 {
+    border-radius: 10px;
+    margin: 30px 15px 0px;
+    padding: 25px 30px 25px;
+    background-color: var(--whiteColor);
+    i {
+        font-size: 45px;
+        transition: .5s ease-in-out;
+        color: var(--blackColor);
+    }
+    h4 {
+        margin: {
+            top: 5px;
+            bottom: 12px;
+        };
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+    p {
+        font-size: 15px;
+    }
+    &:hover {
+        i {
+            color: var(--mainColor);
+        }
+    }
+}
+.service-slider-area-3 {
+    .owl-dots {
+        text-align: center;
+        margin-top: 15px;
+        .owl-dot {
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            border-radius: 50%;
+            transition: .5s ease-in-out;
+            background-color: #dfe1e3 !important;
+        }
+        .active {
+            width: 30px;
+            border-radius: 15px;
+            background-color: var(--mainColor) !important;
+        }
+    }
+}
+.service-3 {
+    position: relative;
+    overflow: hidden;
+    .shape {
+        .shape1 {
+            position: absolute;
+            top: 28%;
+            right: 15%;
+            z-index: 0;
+            text-align: right;
+            animation: top-bottom 3s infinite linear alternate;
+            img {
+                width: 70%;
+                filter: opacity(.4);
+            }
+        }
+        .shape2 {
+            position: absolute;
+            bottom: 16%;
+            left: 15%;
+            z-index: 0;
+            animation: top-bottom 4s infinite linear alternate;
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/*================================================
+Index 03 Portfolio Area CSS
+=================================================*/
+.portfolio-card-3 {
+    position: relative;
+    margin: 30px 15px 0px;
+    .portfolio-card-text-3 {
+        max-width: 60%;
+        border-radius: 10px;
+        padding: 20px 20px 15px;
+        transition: .5s ease-in-out;
+        background-color: rgba($color: #3f9f42, $alpha: 0.9);
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        z-index: 2;
+        transform: rotateY(90deg);
+        transform-origin: left;
+        h4 {
+            margin-bottom: 8px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+            a {
+                color: var(--whiteColor);
+            }
+        }
+        p {
+            margin-bottom: 0px;
+            color: rgba($color: #ffffff, $alpha: 0.8);
+        }
+    }
+    &:hover {
+        .portfolio-card-text-3 {
+            transform: rotateY(0deg);
+        }
+    }
+}
+.portfolio {
+    position: relative;
+    overflow: hidden;
+    .shape {
+        position: absolute;
+        left: 14%;
+        bottom: 8%;
+        z-index: 0;
+        animation: top-bottom 3s infinite linear alternate;
+    }
+}
+
+/*================================================
+Index 03 Why Choose Us Area CSS
+=================================================*/
+.why-we-text-3 {
+    max-width: 600px;
+    padding: {
+        top: 100px;
+        bottom: 200px;
+    };
+    .default-section-title {
+        margin-bottom: 15px;
+    }
+}
+.why-we-img-3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/why-we/ww5.jpg');
+    height: 100%;
+    img {
+        display: none;
+    }
+}
+.why-we-3-card-area {
+    margin-top: 20px;
+}
+.why-we-card-3 {
+    position: relative;
+    padding-left: 60px;
+    max-width: 600px;
+    margin-top: 20px;
+    &:first-child {
+        margin-top: 0px;
+    }
+    i {
+        font-size: 45px;
+        color: var(--mainColor);
+        position: absolute;
+        left: 0;
+    }
+    h4 {
+        margin-bottom: 8px;
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+}
+.why-we-3 {
+    overflow: hidden;
+}
+.fun-facts-3 {
+    position: relative;
+    margin-top: -100px;
+}
+
+/*================================================
+Index 03 Why Only We Area CSS
+=================================================*/
+.why-only-we-3 {
+    .why-only-img-area {
+        .main-img {
+            position: relative;
+            z-index: 1;
+        }
+        .shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .ww-project-card {
+            left: unset;
+            right: 0;
+        }
+        .ww-team-card {
+            left: 0;
+            right: unset;
+        }
+    }
+}
+
+/*================================================
+Index 03 Testimonials Area CSS
+=================================================*/
+.testimonial-3 {
+    overflow: hidden;
+    .testimonial-text-area {
+        max-width: 300px;
+        margin-left: auto;
+        p {
+            margin-top: 12px;
+        }
+    }
+    .testimonial-slider-area-3 {
+        position: relative;
+        .owl-nav {
+            position: absolute;
+            left: -35%;
+            bottom: 10%;
+            button {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 50%;
+                margin: 0px 3px;
+                color: var(--whiteColor) !important;
+                background-color: var(--blackColor) !important;
+            }
+        }
+        .testimonial-card {
+            margin: {
+                top: 30px;
+                bottom: 30px;
+            };
+        }
+    }
+}
+
+/*================================================
+Index 03 Blog Area CSS
+=================================================*/
+.blog-3 {
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 57%;
+        background-color: var(--f8f8f8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*================================================
+Uni Banner Area CSS
+=================================================*/
+.uni-banner{
+    overflow: hidden;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('../images/inner-images/uni-banner.jpg');
+    animation: background-colors 20s infinite linear forwards;
+    position: relative;
+}
+.uni-banner-text-area{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: {
+        top: 155px;
+        bottom: 100px;
+    };
+    h1{
+        font-size: 48px;
+        font-weight: 700;
+        font-family: var(--fontFamily);
+        color: var(--blackColor);
+        margin-bottom: 15px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin: 0px 10px;
+            position: relative;
+            color: var(--mainColor);
+            font: {
+                weight: 600;
+                size: 18px;
+                family: var(--fontFamily);
+            };
+            a{
+                color: var(--blackColor);
+            }
+            &::after{
+                content: '\f101';
+                font-size: 12px;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 600;
+                position: absolute;
+                right: -18px;
+                top: 55%;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Testimonial Area CSS
+=================================================*/
+.testimonial-4 {
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 50%;
+        background-color: var(--f8f8f8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*================================================
+Pricing Area CSS
+=================================================*/
+.pricing-card {
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #eeeeee;
+    transition: .5s ease-in-out;
+    position: relative;
+    padding: 30px 30px 30px;
+    span {
+        padding: 8px 15px;
+        border-radius: 25px;
+        color: var(--blackColor);
+        background-color: var(--f8f8f8);
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font: {
+            weight: 600;
+            size: 20px;
+            family: var(--fontFamily);
+        };
+    }
+    h5 {
+        color: var(--blackColor);
+        font: {
+            size: 20px;
+            weight: 700;
+        };
+    }
+    h2 {
+        color: var(--blackColor);
+        margin-bottom: 12px;
+        font: {
+            size: 48px;
+            weight: 700;
+        };
+        sub {
+            font: {
+                size: 15px;
+                weight: 400;
+                family: var(--fontFamily2);
+            };
+        }
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            margin-bottom: 12px;
+            color: var(--blackColor);
+            font: {
+                size: var(--fontSize);
+                weight: 500;
+            };
+            i {
+                color: var(--mainColor);
+                margin-right: 5px;
+            }
+        }
+        .disabled {
+            color: var(--paragraphColor);
+            i {
+                color: var(--paragraphColor);
+            }
+        }
+    }
+    .default-button {
+        margin-top: 15px;
+    }
+    &:hover {
+        border-color: var(--mainColor);
+    }
+}
+.p-active {
+    border-color: var(--mainColor);
+}
+
+/*================================================
+FAQ Area CSS
+=================================================*/
+.accordion-item {
+    background-color: transparent;
+    margin-top: 15px;
+    border: 1px solid #eeeeee !important;
+    .accordion-body {
+        background-color: transparent;
+        padding-top: 0px;
+        p {
+            font-size: var(--fontSize);
+            font-family: var(--fontFamily2);
+        }
+    }
+}
+.accordion-button {
+    border: 0px !important;
+    min-height: 40px;
+    position: relative;
+    color: var(--blackColor) !important;
+    box-shadow: none !important;
+    background-color: var(--whiteColor);
+    padding: 15px 55px 15px 15px;
+    border-radius: 5px !important;
+    font: {
+        size: 20px;
+        weight: 600;
+        family: var(--fontFamily);
+    };
+    i {
+        width: 20px;
+        height: 20px;
+        font-size: 25px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #a2a2a2;
+        transition: .5s ease-in-out;
+        background-color: #ffffff;
+        position: absolute;
+        right: 10px;
+    }
+    &::after {
+        display: none;
+    }
+    .fa-minus-circle {
+        opacity: 0;
+    }
+    &:not(.collapsed) {
+        background-color: var(--whiteColor);
+        i {
+            transform: rotateX(180deg);
+            color: var(--mainColor);
+        }
+        .fa-minus-circle {
+            opacity: 1;
+        }
+    }
+}
+
+/*================================================
+Error Area CSS
+=================================================*/
+.border-b {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.error-content {
+    max-width: 600px;
+    text-align: center;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    h4 {
+        color: var(--blackColor);
+        margin: {
+            top: 25px;
+            bottom: 12px;
+        };
+        font: {
+            size: 36px;
+            weight: 700;
+        };
+    }
+    .input-group {
+        border-radius: 25px !important;
+        background-color: #f8f8f8;
+        .form-control {
+            border: 0px;
+            border-radius: 25px;
+            padding: 15px 15px;
+            background-color: #f8f8f8;
+        }
+        .btn {
+            width: 40px;
+            height: 40px;
+            margin-top: 3px;
+            margin-right: 5px;
+            border-radius: 50% !important;
+            color: var(--fixWhiteColor);
+            background-color: var(--mainColor);
+            position: relative;
+            top: 5px;
+        }
+    }
+    .default-button {
+        margin-top: 15px;
+    }
+}
+
+/*================================================
+Portfolio Area CSS
+=================================================*/
+.portfolio-contents {
+    .nav {
+        justify-content: center;
+        border: 0px;
+        .nav-link {
+            border: 0px;
+            color: var(--blackColor);
+            transition: .5s ease-in-out;
+            background-color: var(--f8f8f8);
+            border-radius: 25px;
+            margin: 0px 3px 5px;
+            padding: 5px 25px;
+            font:  {
+                size: 18px;
+                weight: 600;
+                family: var(--fontFamily);
+            };
+        }
+        .active {
+            color: var(--fixWhiteColor);
+            background-color: var(--mainColor);
+        }
+    }
+}
+.portfolio-card-4 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 30px;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: .5s ease-in-out;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    .portfolio-card-4-text-area {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 0px 25px 25px;
+        opacity: 0;
+        transition: .5s ease-in-out;
+        h4 {
+            margin-bottom: 10px;
+            font:  {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+            a {
+                color: var(--fixWhiteColor);
+            }
+        }
+        p {
+            color: var(--fixWhiteColor);
+        }
+    }
+    &:hover {
+        &::before, .portfolio-card-4-text-area {
+            opacity: 1;
+        }
+    }
+}
+.portfolio-cards-area-4 {
+    .default-button {
+        display: table;
+        margin: {
+            left: auto;
+            right: auto;
+        };
+    }
+}
+
+/*================================================
+Portfolio Details Area CSS
+=================================================*/
+.details-page-title {
+    margin-bottom: 15px;
+    color: var(--blackColor);
+    font: {
+        size: 28px;
+        weight: 600;
+    };
+}
+.details-main-img {
+    margin-bottom: 25px;
+}
+.pd-info-area {
+    background-color: var(--f8f8f8);
+    padding: 30px 20px 30px;
+    h3 {
+        margin-bottom: 15px;
+        color: var(--blackColor);
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            position: relative;
+            padding-left: 80px;
+            margin-top: 10px;
+            span {
+                color: var(--blackColor);
+                font: {
+                    weight: 600;
+                    size: 18px;
+                    family: var(--fontFamily);
+                };
+                &:first-child {
+                    position: absolute;
+                    left: 0;
+                }
+                &:last-child {
+                    font: {
+                        weight: 400;
+                        size: var(--fontSize);
+                        family: var(--fontFamily2);
+                    };
+                }
+            }
+        }
+        
+    }
+}
+.pd-second-area {
+    .pds-img-area {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../images/inner-images/pd2.jpg');
+        height: 100%;
+        img {
+            display: none;
+        }
+    }
+}
+.pds-text-area {
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    };
+}
+
+/*================================================
+Service Details Area CSS
+=================================================*/
+.sd-img-area {
+    margin-top: 25px;
+    img {
+        margin-bottom: 25px;
+    }
+}
+.sd-list-area {
+    .details-page-title {
+        margin-bottom: 5px;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-top: 12px;
+            width: 200px;
+            color: var(--blackColor);
+            i {
+                margin-right: 3px;
+                color: var(--mainColor);
+            }
+            font: {
+                weight: 500;
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+        }
+    }
+}
+.support-list{
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            margin-top: 12px;
+            color: var(--blackColor);
+            &:first-child {
+                margin-top: 0px;
+            }
+            font: {
+                weight: 500;
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            i {
+                margin-right: 5px;
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+
+/*================================================
+Blog Details Area CSS
+=================================================*/
+.blog-details-text-area {
+    box-shadow: var(--boxShadow);
+    .bdt-text {
+        padding: 0px 30px 25px;
+    }
+    .blog-date {
+        margin-bottom: 10px;
+    }
+    .blog-quote {
+        background-color: var(--f8f8f8);
+        padding: 25px 30px 25px;
+        position: relative;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            background-color: var(--mainColor);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            font-family: var(--fontFamily);
+            color: var(--blackColor);
+        }
+    }
+}
+.blog-text-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 0px;
+    padding: 3px 15px 15px 15px;
+    box-shadow: var(--boxShadow);
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            span{
+                font-weight: 600;
+                margin-right: 10px;
+                padding: 0px !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+    .tag-area{
+        margin-top: 12px;
+        ul{
+            li{
+                margin-right: 5px;
+                cursor: pointer;
+                font: {
+                    size: var(--fontSize);
+                    family: var(--fontFamily2);
+                };
+                i{
+                    color: var(--paragraphColor);
+                }
+                span {
+                    color: var(--blackColor);
+                    font: {
+                        size: 18px;
+                        weight: 600;
+                        family: var(--fontFamily);
+                    };
+                }
+                &:hover{
+                    transition: .5s ease-in-out;
+                    a{
+                        color: var(--mainColor);
+                    }
+                }
+                &:first-child{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+    .social-icons{
+        margin-top: 12px;
+        ul{
+            li{
+                span {
+                    color: var(--blackColor);
+                    font: {
+                        size: 18px;
+                        weight: 600;
+                        family: var(--fontFamily);
+                    };
+                }
+                a{  
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    color: var(--paragraphColor);
+                    background-color: var(--f8f8f8);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover{
+                        color: var(--whiteColor);
+                        background-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comment-card{
+    margin-top: 30px;
+    position: relative;
+    padding-left: 115px;
+    img{
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+    }
+    h5{
+        margin-bottom: 5px;
+        color: var(--blackColor);
+        font: {
+            weight: 600;
+            size: 20px;
+        };
+    }
+    span{
+        color: var(--paragraphColor);
+        margin-bottom: 10px;
+        font: {
+            weight: 400;
+            size: 14px;
+            family: var(--fontFamily2);
+        };
+    }
+    p{
+        margin: {
+            top: 10px;
+            bottom: 10px;
+        };
+    }
+    a{
+        font-size: 14px;
+        color: var(--mainColor);
+        font-weight: 500;
+    }
+}
+.cml-20 {
+    margin-left: 50px;
+}
+.bd-form{
+    border-radius: 0px;
+    margin-top: 30px;
+    .form-control{
+        border: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 15px 15px;
+        border-radius: 0px;
+        background-color: #f8f8f8;
+    }
+    .form-check {
+        label {
+            color: var(--paragraphColor);
+            font: {
+                size: var(--fontSize2);
+                family: var(--fontFamily);
+            };
+        }
+    }
+    .default-button{
+        margin-top: 15px;
+    }
+}
+.blog-details-page-form-area{
+    box-shadow: var(--boxShadow);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/*================================================
+Details page Sidebar Area CSS
+=================================================*/
+.sidebar-card {
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: var(--f8f8f8);
+    h3 {
+        margin-bottom: 20px;
+        color: var(--blackColor);
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+}
+.sidebar-category {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            margin-top: 15px;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: var(--whiteColor);
+                color: var(--paragraphColor);
+                padding: 12px 15px;
+                border-radius: 5px;
+                font:  {
+                    size: var(--fontSize);
+                    weight: 500;
+                };
+                i {
+                    color: var(--whiteColor);
+                    margin-left: 10px;
+                }
+                &:hover {
+                    color: var(--whiteColor);
+                    background-color: var(--mainColor);
+                    i {
+                        color: var(--fixWhiteColor);
+                    }
+                }
+            }
+            .active {
+                color: var(--fixWhiteColor);
+                background-color: var(--mainColor);
+                i {
+                    color: var(--fixWhiteColor);
+                }
+            }
+        }
+    }
+}
+.sidebar-contact {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            margin-top: 15px;
+            color: var(--paragraphColor);
+            i {
+                color: var(--mainColor);
+                margin-right: 5px;
+            }
+            font: {
+                size: 16px;
+                weight: 500;
+                family: var(--fontFamily2);
+            };
+            a {
+                margin-left: 5px;
+                color: var(--paragraphColor);
+            }
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+.search-box{
+    .input-group{
+        border: 1px solid #eeeeee;
+        background-color: var(--whiteColor);
+        border-radius: 25px;
+        margin-top: 0px;
+    }
+    .form-control{
+        background-color: var(--whiteColor);
+        color: var(--blackColor);
+        border: 0px;
+        padding: 10px 15px;
+        border-radius: 25px;
+    }
+    .btn{
+        border-radius: 50% !important;
+        color: var(--whiteColor);
+        transition: .5s ease-in-out;
+        background-color: var(--mainColor);
+        &:hover{
+            background-color: var(--blackColor);
+        }
+    }
+}
+.recent-news,.sd-tag{
+    margin-top: 30px;
+}
+.recent-news-card{
+    margin-top: 20px;
+    min-height: 90px;
+    position: relative;
+    padding-left: 105px;
+    a  {
+        &:hover {
+            color: var(--mainColor);
+        }
+    }
+    img{
+        position: absolute;
+        left: 0;
+    }
+    h5{
+        line-height: 1.4;
+        margin-bottom: 5px;
+        font: {
+            weight: 500;
+            size: 18px;
+        };
+    }
+    p{
+        font-size: 14px;
+        i {
+            margin-right: 3px;
+            color: var(--mainColor);
+        }
+    }
+}
+.sd-tag{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-weight: 500;
+            a{
+                font-size: 13px;
+                padding: 8px 15px 7px;
+                border-radius: 25px;
+                color: var(--paragraphColor);
+                border: 1px solid #eeeeee;
+                display: inline-block;
+                background-color: var(--whiteColor);
+                &:hover{
+                    color: var(--whiteColor);
+                    background-color: var(--mainColor);
+                }
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.paginations {
+    display: table;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin-right: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: .5s ease-in-out;
+                background-color: var(--whiteColor);
+                box-shadow: var(--boxShadow);
+                font: {
+                    family: var(--fontFamily2);
+                    size: var(--fontSize);
+                    weight: 700;
+                };
+                &:hover {
+                    color: var(--whiteColor);
+                    background-color: var(--mainColor);
+                }
+            }
+        }
+        .active {
+            a {
+                color: var(--whiteColor);
+                background-color: var(--mainColor);
+            }
+        }
+    }
+}
+
+/*================================================
+Contact Page CSS
+=================================================*/
+.contact-card-area {
+    .default-section-title {
+        h3 {
+            margin-bottom: 15px;
+        }
+    }
+}
+.contact-card {
+    margin-top: 15px;
+    h4 {
+        margin-bottom: 8px;
+        color: var(--blackColor);
+        i {
+            font-size: 20px;
+            margin-right: 5px;
+            color: var(--mainColor);
+        }
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+    p {
+        a {
+            color: var(--paragraphColor);
+            font: {
+                size: var(--fontSize);
+                weight: 500;
+            };
+            &:hover {
+                color: var(--mainColor);
+            }
+        }
+    }
+    ul {
+        margin: 12px 0px 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                font-size: 14px;
+                margin: 0px 3px;
+                background-color: var(--f8f8f8);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--paragraphColor);
+                &:hover {
+                    color: var(--fixWhiteColor);
+                    background-color: var(--mainColor);
+                }
+            }
+        }
+    }
+}
+.contact-page-form-area {
+    padding: 30px;
+    box-shadow: var(--boxShadow);
+    .default-section-title {
+        h3 {
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    .form-control {
+        padding: 15px 15px;
+        margin: 10px 0px;
+        border: 0px;
+        background-color: #f6f6f6;
+        font: {
+            size: var(--fontSize);
+            family: var(--fontFamily2);
+        };
+    }
+    .default-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.with-errors {
+    ul {
+        li {
+            color: red;
+        }
+    }
+}
+
+/*================================================
+Google Map area CSS
+=================================================*/
+.google-map {
+    width: 100%;
+    height: 500px;
+    .g-map{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/*================================================ 
+Log In Page CSS
+=================================================*/
+.login-form{
+    margin-top: 20px;
+    form{
+        label{
+            color: var(--blackColor);
+            font: {
+                family: var(--fontFamily);
+                size: var(--fontSize);
+                weight: 600;
+            };
+        }
+        .form-control{
+            border: 1px solid #eeeeee;
+        }
+        .form-check{
+            label{
+                font-weight: 400;
+                font-size: 14px;
+                font-family: var(--fontFamily2);
+            }
+        }
+        .default-button{
+            width: 100%;
+        }
+    }
+    p{
+        font-size: 14px;
+        font-style: italic;
+        font-family: var(--fontFamily2);
+    }
+}
+.form-check-input:checked{
+    border-color: var(--mainColor);
+    background-color: var(--mainColor);
+}
+
+/*================================================
+Terms & Privacy area CSS
+=================================================*/
+.terms{
+    margin-bottom: -15px;
+    strong{
+        color: var(--blackColor);
+    }
+    a{
+        color: var(--mainColor);
+    }
+    h1,h2,h3,h4,h5{
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-family: var(--fontFamily);
+        font-weight: 600;
+    }
+    h6{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--fontFamily);
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    p {
+        font: {
+            size: var(--fontSize2);
+            family: var(--fontFamily2);
+        };
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            margin: 10px 0px;
+            font-size: var(--fontSize);
+            color: var(--paragraphColor);
+            font-family: var(--fontFamily2);
+            span{
+                font-weight: 700;
+                margin-right: 8px;
+                color: var(--blackColor);
+            }
+        }
+    }
+    .payment{
+        li{
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--mainColor);
+                position: absolute;
+                left: 0;
+                top: 6px;
+            }
+        }
+    }
+}
+
+/*================================================
+Coming Soon Area CSS
+=================================================*/
+.inner-header {
+    .main-nav {
+        background-color: var(--blackColor);
+    }
+}
+.coming-soon-overlay {
+    text-align: center;
+}
+.coming {
+    box-shadow: var(--boxShadow);
+    padding: 30px;
+    text-align: center;
+    .c-logo {
+        text-align: center;
+        display: block;
+        img {
+            width: fit-content;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    img {
+        width: fit-content;
+        max-width: 100%;
+    }
+    h3 {
+        text-transform: capitalize;
+        color: var(--blackColor);
+        padding: 20px 0 0 0;
+        font: {
+            size: 45px;
+            weight: 700;
+        };
+    }
+    .form-control {
+        background-color: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        border-radius: 25px;
+        padding: 12px 15px;
+    }
+    .newsletter-form {
+        max-width: 600px;
+        margin: {
+            left: auto;
+            right: auto;
+        };
+    }
+    p {
+        font-size: 15px;
+        margin-top: 20px;
+        color: var(--paragraphColor);
+    }
+    .default-button {
+        padding: 13px 20px;
+        border-radius: 25px;
+        width: 100%;
+    }
+}
+.getting-start {
+    display: flex;
+    justify-content: center;
+    div {
+        border-radius: 8px;
+        flex-basis: 150px;
+        padding: 15px 0px;
+        text-align: center;
+        background-color: var(--fix-blackColor);
+        box-shadow: var(--boxShadow);
+        span {
+            font-size: 50px;
+            display: block;
+            color: #ffffff;
+            font-weight: 700;
+            &:nth-child(2) {
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.countdown-wrapper {
+    margin: 50px 0;
+}
+
+.social-icons {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                margin: 0px 3px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--f8f8f8);
+                color: var(--paragraphColor);
+                &:hover {
+                    color: var(--whiteColor);
+                    background-color: var(--mainColor);
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Animation Area CSS
+=================================================*/
+@keyframes background-colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    0% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes top-bottom {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+
+}
+
